@@ -8,11 +8,13 @@
    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/patatapstyle.css"/>
    <script type="text/javascript" src="assests/js/lib/jquery-3.3.1.min.js"></script>
    <script src="assests/javascript/lib/PaperJS/dist/paper-full.js"></script>
-   <script type="text/paperscript" canvas="canvas"></script>
-   
+   <script type="text/paperscript" canvas="myCanvas">
+      var myCircle = new Path.Circle(new Point(50, 50), 300);
+      myCircle.fillColor = 'purple';
+   </script>
 </head>
 <body>
-
+   <canvas id="myCanvas" resize></canvas>
    <script src="/assests/javascript/patatap.js"></script>
 </body>
 </html>
