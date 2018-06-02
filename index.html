@@ -11,7 +11,8 @@
    <script type="text/paperscript" canvas="myCanvas">
       function onKeyDown(event) { 
          var maxPoint = new Point(view.size.width, view.size.height);
-         var randomPoint = Point.random();
+         //This will generate random points from .0 to .999(console.log) for better understanding
+         var randomPoint = Point.random(); 
          var point = maxPoint * randomPoint;
          new Path.Circle(point, 50).fillColor = "orange";
    }
