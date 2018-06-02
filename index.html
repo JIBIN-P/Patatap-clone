@@ -5,16 +5,20 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Patatap</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" type="text/css" media="screen" href="assests/css/patatapstyle.css"/>
-   <script type="text/javascript" src="assests/js/lib/jquery-3.3.1.min.js"></script>
-   <script src="assests/javascript/lib/PaperJS/dist/paper-full.js"></script>
+   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/patatapstyle.css"/>
+   <script type="text/javascript" src="assets/javascript/patatap.js"></script>
+   <script src="assets/javascript/lib/PaperJS/dist/paper-full.js"></script>
    <script type="text/paperscript" canvas="myCanvas">
-      var myCircle = new Path.Circle(new Point(50, 50), 300);
-      myCircle.fillColor = 'purple';
+      function onKeyDown(event) { 
+         var maxPoint = new Point(view.size.width, view.size.height);
+         var randomPoint = Point.random();
+         var point = maxPoint * randomPoint;
+         new Path.Circle(point, 50).fillColor = "orange";
+   }
    </script>
 </head>
 <body>
    <canvas id="myCanvas" resize></canvas>
-   <script src="/assests/javascript/patatap.js"></script>
+   <script src="/assets/javascript/patatap.js"></script>
 </body>
 </html>
